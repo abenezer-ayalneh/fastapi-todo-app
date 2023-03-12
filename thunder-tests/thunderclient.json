@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "9477432f-aa93-42d7-b3eb-9fb6bf9e5040",
+    "colId": "a0e83b4e-7c02-4584-8b59-868f9f4d1503",
+    "containerId": "",
+    "name": "Create todo",
+    "url": "{{url}}/todos",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-03-12T10:33:33.752Z",
+    "modified": "2023-03-12T10:34:51.478Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Todo three\",\n  \"description\": \"This is the third todo\",\n  \"created_at\": \"2023-03-12T10:33:51.025Z\",\n  \"due_date\": \"2023-03-23T10:33:51.025Z\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "df1fc788-9193-467d-a7ad-537a96890adf",
+    "colId": "a0e83b4e-7c02-4584-8b59-868f9f4d1503",
+    "containerId": "",
+    "name": "Get todos",
+    "url": "{{url}}/todos",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-03-12T10:35:14.240Z",
+    "modified": "2023-03-12T10:35:21.692Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "39784a24-25f9-43e9-9cc2-2416f9f11a6f",
+    "colId": "a0e83b4e-7c02-4584-8b59-868f9f4d1503",
+    "containerId": "",
+    "name": "Update todo (PUT)",
+    "url": "{{url}}/todos/1",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2023-03-12T10:35:33.611Z",
+    "modified": "2023-03-12T10:36:34.312Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Todo one updated\",\n  \"description\": \"This is the updated description\",\n  \"created_at\": \"2023-03-12T10:33:51.025Z\",\n  \"due_date\": \"2023-03-24T10:33:51.025Z\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "dc11a35e-1f58-4d95-88cc-fde2015c1c57",
+    "colId": "a0e83b4e-7c02-4584-8b59-868f9f4d1503",
+    "containerId": "",
+    "name": "Update todo (PATCH)",
+    "url": "{{url}}/todos/1",
+    "method": "PATCH",
+    "sortNum": 40000,
+    "created": "2023-03-12T11:13:43.026Z",
+    "modified": "2023-03-12T11:14:34.568Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\" : \"New title\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
