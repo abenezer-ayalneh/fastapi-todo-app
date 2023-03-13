@@ -60,14 +60,28 @@
     "method": "PATCH",
     "sortNum": 40000,
     "created": "2023-03-12T11:13:43.026Z",
-    "modified": "2023-03-12T11:14:34.568Z",
+    "modified": "2023-03-13T11:09:51.786Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"title\" : \"New title\"\n}",
+      "raw": "{\n  \"title\" : \"Patched title\",\n  \"description\": \"Patched description\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "3877a00e-9cc1-4112-b484-3504894ccafa",
+    "colId": "a0e83b4e-7c02-4584-8b59-868f9f4d1503",
+    "containerId": "",
+    "name": "Delete todo",
+    "url": "{{url}}/todos/1",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2023-03-13T11:13:26.121Z",
+    "modified": "2023-03-13T11:13:40.126Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]

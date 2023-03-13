@@ -25,9 +25,15 @@ def update_whole_todo(db: Session, todo_id: int, todo: schemas.TodoPut):
 
 
 def update_todo_partially(db: Session, todo_id: int, todo: schemas.TodoPatch):
-    print({**todo.dict()})
     db_todo = models.Todo
     update_result = db.query(db_todo).\
-        filter(db_todo.id == todo_id).update({**todo.dict()})
+        filter(db_todo.id == todo_id).update({key:value for key,value in todo.dict().items() if value != None})
     db.commit()
     return update_result
+
+
+def delete_todo(db: Session, todo_id: int):
+    db_todo = models.Todo
+    delete_result = db.query(db_todo).filter(db_todo.id == todo_id).delete()
+    db.commit()
+    return delete_result

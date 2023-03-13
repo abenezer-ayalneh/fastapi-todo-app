@@ -1,12 +1,13 @@
+from typing import Optional, Union
 from pydantic import BaseModel
 from datetime import datetime
 
 
 class TodoBase(BaseModel):
-    title: str
-    description: str | None = None
-    created_at: datetime
-    due_date: datetime
+    title: Union[str, None]
+    description: Union[str, None]
+    created_at: Union[datetime, None]
+    due_date: Union[datetime, None]
 
 
 class TodoCreate(TodoBase):
@@ -21,13 +22,15 @@ class TodoPut(TodoBase):
 
 
 class TodoPatch(TodoBase):
-    title: str | None = None
-    description: str | None = None
-    due_date: datetime | None = None
+    title: Union[str, None]
+    description: Union[str, None]
+    due_date: Union[datetime, None]
 
 
 class Todo(TodoBase):
     id: int
+    title: str
+    created_at: str
 
     class Config:
         orm_mode = True

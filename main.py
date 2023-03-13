@@ -42,3 +42,8 @@ def update_todos(todo_id: int, todo: schemas.TodoPut, db: Session = Depends(get_
 @app.patch("/todos/{todo_id}", response_model=int)
 def update_todos(todo_id: int, todo: schemas.TodoPatch, db: Session = Depends(get_db)):
     return crud.update_todo_partially(db=db, todo_id=todo_id, todo=todo)
+
+
+@app.delete("/todos/{todo_id}", response_model=int)
+def update_todos(todo_id: int, db: Session = Depends(get_db)):
+    return crud.delete_todo(db=db, todo_id=todo_id)
